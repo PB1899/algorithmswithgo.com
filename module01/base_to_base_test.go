@@ -24,6 +24,9 @@ func TestBaseToBase(t *testing.T) {
 		}, {
 			"8831A383B", 12, 16,
 			"DEADBEEF",
+		}, {
+			"1234", 10, 10,
+			"1234",
 		},
 	}
 	for _, tc := range tests {
@@ -33,5 +36,11 @@ func TestBaseToBase(t *testing.T) {
 				t.Fatalf("BaseToBase() = %v; want %v", got, tc.want)
 			}
 		})
+	}
+}
+
+func BenchmarkBaseToBase(b *testing.B) {
+	for i := 0; i <= b.N; i++ {
+		BaseToBase("8831A383B", 12, 10)
 	}
 }

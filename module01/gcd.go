@@ -1,5 +1,15 @@
 package module01
 
 func GCD(a, b int) int {
-	return 0
+	if b == 0 {
+		return a
+	}
+	return GCD(b, a%b)
+}
+
+func GCDLoop(a, b int) int {
+	for b != 0 {
+		a, b = b, a%b
+	}
+	return a
 }
