@@ -9,6 +9,10 @@ func TestInsertionSortInt(t *testing.T) {
 	sorttest.TestInt(t, InsertionSortInt)
 }
 
+func TestInsertionSortIntInsertFunc(t *testing.T) {
+	sorttest.TestInt(t, InsertionSortIntInsertFunc)
+}
+
 func BenchmarkInsertionSortInt(b *testing.B) {
 	sorttest.BenchmarkInt(b, InsertionSortInt)
 }

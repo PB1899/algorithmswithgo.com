@@ -9,6 +9,7 @@ func TestBubbleSortInt(t *testing.T) {
 	sorttest.TestInt(t, BubbleSortInt)
 }
 
+// $ go test -v -bench BubbleSortInt -run=^$
 func BenchmarkBubbleSortInt(b *testing.B) {
 	sorttest.BenchmarkInt(b, BubbleSortInt)
 
